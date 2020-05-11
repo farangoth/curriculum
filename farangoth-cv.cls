@@ -9,10 +9,10 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-\RequirePackage[left=5.5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5.5cm,top=1.1cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 
 \RequirePackage{hyperref}
-\hypersetup{pdfborder={0,0,0},colorlinks}
+\hypersetup{pdfborder={0,0,0},colorlinks,urlcolor=header}
 
 %% Colors %%%%%%%%%%
 \RequirePackage{xcolor}
@@ -110,7 +110,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
       \thinfont \cvTitle%
     };
   \end{tikzpicture}
-  \vspace{1cm}
+  \vspace{2.2cm}
 }
 
 \newcommand*{\othermakeheader}{%
@@ -129,11 +129,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
         {\color{header}\bodyfont\myPhoneNumber{}}\\
         {\color{header}\bodyfont\href{mailto:\myMail{}}{\myMail{}}}\\
         {\color{header}\bodyfont\href{\myGithub}{\colorGithubLogo}}\\
-        {\color{header}\bodyfont\href{\myLinkedin}{\colorLinkedinLogo}}\\
+        {\color{header}\bodyfont\href{\myLinkedin}{\colorLinkedinLogo}}
       \end{tabular}
     };
   \end{tikzpicture}
-  \vspace{1cm}
+  \vspace{2.2cm}
 }
 
 %% side block %%%%%%
@@ -144,10 +144,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \newenvironment{aside}{%
   \let\oldsection\section%
   \renewcommand{\section}[1]{%
-    \par\vspace{\parskip}{\large\headingfont\color{headercolor} #1}
+    \par\vspace{2\parskip}{\large\headingfont\color{headercolor} #1}
   }
   
-  \begin{textblock}{4.4} (0.4, 5.2)
+  \begin{textblock}{4.4} (0.4, 4.6)
     \begin{flushright}
       \obeycr%
     }{%
@@ -169,7 +169,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
       red\or%
       orange\or%
       green\or%
-      purpler\else%
+      purple\else%
       headercolor\fi%
     } #1#2#3% 
   }%
@@ -210,9 +210,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 
 \newcommand{\entry}[4]{%
   \vspace{2\parskip}
-  \parbox[t]{3.0cm}{%
+  \parbox[t]{3cm}{%
     #1\\
-    {\thinfont\color{lightgray} #3} 
+    {\thinfont\color{lightgray}#3}
   }&%
   \parbox[t]{11.5cm}{%
     \textbf{#2}\\
