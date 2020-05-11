@@ -221,17 +221,19 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \\
 }
 
-\newcommand{\doubleentryref}[6]{%
+\newcommand{\doubleentryref}[8]{%
   \vspace{2\parskip}
   \begin{tabular*}{\textwidth}{ll}
-    \textbf{#1}&\textbf{#4} \\
-    \emph{\href{mailto:#2}{#2}}&\emph{\href{mailto:#5}{#5}}\\
-    \parbox[t]{7cm}{#3}&\parbox[t]{7cm}{#6}%
+    \textbf{#1}&\textbf{#5} \\
+    \emph{\href{mailto:#2}{#2}}&\emph{\href{mailto:#6}{#6}}\\
+    \emph{#3}&\emph{#7}\\
+    \parbox[t]{7cm}{#4}&\parbox[t]{7cm}{#8}%
   \end{tabular*}
   \\
 }
 
 \newcommand{\doubleentry}[4]{%
+  \vspace{2\parskip}
   \begin{tabular*}{\textwidth}{ll}
     \textbf{#1}&\textbf{#3} \\
     \parbox[t]{7cm}{#2}&\parbox[t]{7cm}{#4}%
