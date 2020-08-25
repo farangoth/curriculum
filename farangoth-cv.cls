@@ -11,7 +11,7 @@
 
 \RequirePackage[left=5.5cm,top=1.1cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 
-\RequirePackage{hyperref}
+\RequirePackage[pdfusetitle]{hyperref}
 \hypersetup{pdfborder={0,0,0},colorlinks,urlcolor=header}
 
 %% Colors %%%%%%%%%%
@@ -85,7 +85,6 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \newcommand*{\colorLinkedinLogo}{Linked.\textcolor{linkedin}{\faLinkedinSquare}}
 \newcommand*{\colorGithubLogo}{Github \textcolor{black}{\faGithubSquare}}
 
-
 %% variables %%%%%%%
 
 
@@ -99,10 +98,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \RequirePackage{tikz}
 
 \newcommand*{\makeheader}{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3.5cm] (box) at (current page.north){};
+  \begin{tikzpicture}[remember picture, overlay]
+    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=2.8cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
-      \fontsize{40pt}{72pt}\color{header}%
+      \fontsize{32pt}{50pt}\color{header}%
       {\thinfont \myFirstName}{\bodyfont \myLastName}
     };
     \node [anchor=north] at (name.south) {%
@@ -110,8 +109,20 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
       \thinfont \cvTitle%
     };
   \end{tikzpicture}
-  \vspace{2.2cm}
+  \vspace{1.4cm}
 }
+
+\newcommand*{\makefooter}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node [rectangle, fill=fillheader, anchor=south, minimum width=\paperwidth, minimum height=0.75cm] (box) at (current page.south){};
+    \node [anchor=center] (name) at (box) {
+      \fontsize{14pt}{24pt}\color{header}
+      {\thinfont Clément Savalle \quad | \quad \faEnvelope\,\href{mailto:\myMail}{\myMail} \quad | \quad \faMobile\,\href{tel:\myPhoneNumber}{\myPhoneNumber}}
+      };
+  \end{tikzpicture}
+}
+
+
 
 \newcommand*{\othermakeheader}{%
   \begin{tikzpicture}[remember picture,overlay]
@@ -147,7 +158,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
     \par\vspace{2\parskip}{\large\headingfont\color{headercolor} #1}
   }
   
-  \begin{textblock}{4.4} (0.4, 4.6)
+  \begin{textblock}{4.4} (0.4, 3.4)
     \begin{flushright}
       \obeycr%
     }{%
@@ -177,7 +188,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{3\parskip}
+  \par\vspace{1\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
@@ -186,11 +197,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 }
 
 \renewcommand{\subsection}[1]{
-  \par\vspace{.5\parskip}%
+  \par\vspace{0.10\parskip}%
   {%
   \large\headingfont\color{headercolor} #1%
   }
-  \par\vspace{.25\parskip}%
+  \par\vspace{0.05\parskip}%
 }
 
 % Reset the style
@@ -209,10 +220,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 }
 
 \newcommand{\entry}[4]{%
-  \vspace{2\parskip}
-  \parbox[t]{3cm}{%
-    #1\\
-    {\thinfont\color{lightgray}#3}
+  \vspace{1.5\parskip}
+  \parbox[t]{2.7cm}{%
+    {\thinfont\small#1}\\
+    {\small\color{lightgray}#3}
   }&%
   \parbox[t]{11.5cm}{%
     \textbf{#2}\\

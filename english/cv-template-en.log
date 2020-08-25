@@ -1,0 +1,87 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/TeX Live for SUSE Linux) (preloaded format=xelatex 2020.6.9)  14 JUL 2020 17:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**cv-template-en.tex
+(./cv-template-en.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-04-06>
+
+! LaTeX Error: File `farangoth-cv.cls' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
+
+Enter file name: 
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+
+(/usr/share/texmf/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+)
+(/usr/share/texmf/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count163
+\U@D=\dimen134
+
+(/usr/share/texmf/tex/generic/babel/xebabel.def
+(/usr/share/texmf/tex/generic/babel/txtbabel.def))
+\bbl@readstream=\read2
+\bbl@dirlevel=\count164
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language14) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language14) on input line 108.
+))
+(/usr/share/texmf/tex/latex/lipsum/lipsum.sty
+(/usr/share/texmf/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-04-06 L3 programming layer (loader) 
+
+(/usr/share/texmf/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-03-12 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count165
+\l__pdf_internal_box=\box45
+\g__pdf_backend_object_int=\count166
+\g__pdf_backend_annotation_int=\count167
+))
+(/usr/share/texmf/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count168
+\g__xparse_grabber_int=\count169
+\l__xparse_m_args_int=\count170
+\l__xparse_v_nesting_int=\count171
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(/usr/share/texmf/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+
+! LaTeX Error: File `common/info-perso.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+! Interruption.
+<to be read again> 
+                   }
+l.6 \input{common/info-perso.tex}
+                                 ^^M
+? exit
+ 
+Here is how much of TeX's memory you used:
+ 1366 strings out of 480569
+ 29289 string characters out of 5910018
+ 459922 words of memory out of 5000000
+ 18901 multiletter control sequences out of 15000+600000
+ 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 450 hyphenation exceptions out of 8191
+ 36i,0n,36p,219b,22s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
