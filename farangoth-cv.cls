@@ -14,6 +14,7 @@
 \RequirePackage[pdfusetitle]{hyperref}
 \hypersetup{pdfborder={0,0,0},colorlinks,urlcolor=header}
 
+
 %% Colors %%%%%%%%%%
 \RequirePackage{xcolor}
 
@@ -114,10 +115,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 
 \newcommand*{\makefooter}{%
   \begin{tikzpicture}[remember picture, overlay]
-    \node [rectangle, fill=fillheader, anchor=south, minimum width=\paperwidth, minimum height=0.75cm] (box) at (current page.south){};
+    \node [rectangle, fill=fillheader, anchor=south, minimum width=\paperwidth, minimum height=0.9cm] (box) at (current page.south){};
     \node [anchor=center] (name) at (box) {
       \fontsize{14pt}{24pt}\color{header}
-      {\thinfont Clément Savalle \quad | \quad \faEnvelope\,\href{mailto:\myMail}{\myMail} \quad | \quad \faMobile\,\href{tel:\myPhoneNumber}{\myPhoneNumber}}
+      {\thinfont Clément Savalle \quad | \quad \href{mailto:\myMail}{\faEnvelope\,\myMail} \quad | \quad \href{tel:\myPhoneNumber}{\faMobile\,\myPhoneNumber}}
       };
   \end{tikzpicture}
 }
@@ -193,11 +194,12 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{0.5\parskip}
+  \par\vspace{0.4\parskip}
 }
 
+
 \renewcommand{\subsection}[1]{
-  \par\vspace{0.10\parskip}%
+  %\par\vspace{0.10\parskip}%
   {%
   \large\headingfont\color{headercolor} #1%
   }
@@ -223,7 +225,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \vspace{1.5\parskip}
   \parbox[t]{2.7cm}{%
     {\thinfont\small#1}\\
-    {\small\color{lightgray}#3}
+%    {\thinfont\small\color{lightgray}#3}
+    {\thinfont\small#3}
   }&%
   \parbox[t]{11.5cm}{%
     \textbf{#2}\\
