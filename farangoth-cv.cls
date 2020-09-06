@@ -11,6 +11,7 @@
 
 \RequirePackage[left=5.5cm,top=1.1cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 
+
 \RequirePackage[pdfusetitle]{hyperref}
 \hypersetup{pdfborder={0,0,0},colorlinks,urlcolor=header}
 
@@ -156,8 +157,16 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \newenvironment{aside}{%
   \let\oldsection\section%
   \renewcommand{\section}[1]{%
-    \par\vspace{2\parskip}{\large\headingfont\color{headercolor} #1}
+    \par\vspace{2\parskip}
+    {\Large\headingfont\color{headercolor} #1}
+    %\par\vspace{0.5\parskip}
   }
+
+  \renewcommand{\subsection}[1]{
+    \par\vspace{0.5\parskip}%
+    {\large\headingfont\color{headercolor} #1}
+    \par\vspace{0.2\parskip}%
+}
   
   \begin{textblock}{4.4} (0.4, 3.4)
     \begin{flushright}
@@ -222,7 +231,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 }
 
 \newcommand{\entry}[4]{%
-  \vspace{1.5\parskip}
+  \vspace{1.8\parskip}
   \parbox[t]{2.7cm}{%
     {\thinfont\small#1}\\
 %    {\thinfont\small\color{lightgray}#3}
