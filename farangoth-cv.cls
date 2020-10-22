@@ -83,9 +83,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 
-\usepackage{fontawesome}
-\newcommand*{\colorLinkedinLogo}{Linked.\textcolor{linkedin}{\faLinkedinSquare}}
-\newcommand*{\colorGithubLogo}{Github \textcolor{black}{\faGithubSquare}}
+% \usepackage{fontawesome}
+% \newcommand*{\colorLinkedinLogo}{Linked.\textcolor{linkedin}{\faLinkedinSquare}}
+% \newcommand*{\colorGithubLogo}{Github \textcolor{black}{\faGithubSquare}}
 
 %% variables %%%%%%%
 
@@ -114,12 +114,24 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \vspace{1.4cm}
 }
 
-\newcommand*{\makefooter}{%
+
+\newcommand*{\makefooterFR}{%
   \begin{tikzpicture}[remember picture, overlay]
     \node [rectangle, fill=fillheader, anchor=south, minimum width=\paperwidth, minimum height=0.9cm] (box) at (current page.south){};
     \node [anchor=center] (name) at (box) {
       \fontsize{14pt}{24pt}\color{header}
-      {\thinfont Clément Savalle \quad | \quad \href{mailto:\myMail}{\faEnvelope\,\myMail} \quad | \quad \href{tel:\myPhoneNumber}{\faMobile\,\myPhoneNumber}}
+      {\thinfont Clément Savalle \quad | \quad \href{mailto:\myMail}{\myMail} \quad | \quad \href{tel:\myPhoneNumberFR}{\myPhoneNumberFR}}
+      };
+  \end{tikzpicture}
+}
+
+
+\newcommand*{\makefooterUK}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node [rectangle, fill=fillheader, anchor=south, minimum width=\paperwidth, minimum height=0.9cm] (box) at (current page.south){};
+    \node [anchor=center] (name) at (box) {
+      \fontsize{14pt}{24pt}\color{header}
+      {\thinfont Clément Savalle \quad | \quad \href{mailto:\myMail}{\myMail} \quad | \quad \href{tel:\myPhoneNumberUK}{\myPhoneNumberUK}}
       };
   \end{tikzpicture}
 }
